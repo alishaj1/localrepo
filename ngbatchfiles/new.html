@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>mapreducefilter</title>
+	<style>
+	ul li{
+			width:200px;
+			list-style-type: none;
+			float:left;
+			border:2px solid black;
+			padding:10px;
+			
+		}
+		ul::after,ul::before{
+			content:'';
+			display: block;
+			clear:both;
+		}
+	
+	</style>
+</head>
+<body>
+<div class="container">
+		<ul>
+			<li>First Name</li>
+			<li>Last Name</li>
+			<li>ProductName</li>
+			<li>ItemCost</li>
+			
+		</ul>
+		<ul>
+		
+		<li id="f1"> </li>
+		<li id="l1"> </li>
+		<li id="o1"> </li>
+		
+		</ul>
+		
+	</div>
+<script src="data.js"></script>
+<script type="text/javascript">
+ function newData(){
+			var obj = [];
+			var obj1=[];
+			var obj2=[];
+		 	for(var i = 0 ; i < 2; i = i+1){
+		 		console.log(data[i])
+		 		var arr = [];
+				var arr1=[]; 
+				var arr2=[];
+				var arr3=[];
+		 		arr.push(data[i].firstName);
+		 		arr1.push(data[i].lastName);
+		 	//arr3=push(data[i].orders);alert(arr3);
+			     obj.push(arr);
+				  obj.toString;
+				  obj1.push(arr1);
+				  obj1.toString;
+				//for(var i=0;i<orders.length;i++)
+                 //  for(var j=0;j<orders[i].length;j++)
+                       // {
+                         //  arr3.push(arr2[i][j]);
+                           //   }
+                       //obj2.push(arr3);
+                       //obj2.toString;
+					   //alert(obj2);
+				document.getElementById("f1").innerHTML = obj;
+		
+				document.getElementById("l1").innerHTML = obj1;
+				
+				
+			}	
+		 	return obj;
+		 }
+		 var dataOfCust = newData();
+
+</script>
+
+</body>
+</html>
